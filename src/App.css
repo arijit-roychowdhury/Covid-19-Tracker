@@ -37,12 +37,19 @@ body {
 .app__dropdown {
   width: 32%;
   max-width: 280px;
+  min-width: 180px !important;
 }
 
 .app__stats {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@media (max-width: 1041px) {
+  .app {
+    width: 90%;
+  }
 }
 
 @media (max-width: 981px) {
@@ -56,5 +63,11 @@ body {
   }
   .app__right {
     width: 100%;
+  }
+}
+
+@media (max-width: 618px) {
+  .app__stats {
+    flex-direction: column;
   }
 }
