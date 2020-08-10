@@ -4,15 +4,15 @@ import { Circle, Popup } from "react-leaflet";
 
 const casesTypeColors = {
   cases: {
-    hex: "#CC1034",
+    hex: "#ec4887",
     multiplier: 800,
   },
   recovered: {
-    hex: "#7dd71d",
+    hex: "#875fc0",
     multiplier: 1200,
   },
   deaths: {
-    hex: "#fb4443",
+    hex: "#46c5f2",
     multiplier: 2000,
   },
 };
