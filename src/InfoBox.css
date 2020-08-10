@@ -1,0 +1,25 @@
+.infoBox {
+  flex: 1;
+  margin-right: 2%;
+  border-radius: 10px !important;
+}
+
+.infoBox:last-child {
+  margin-right: 0;
+}
+
+.infoBox:nth-child(1) {
+  background-color: #ec4887;
+}
+.infoBox:nth-child(2) {
+  background-color: #875fc0;
+}
+.infoBox:nth-child(3) {
+  background-color: #46c5f2;
+}
+
+.infoBox .infoBox__title,
+.infoBox .infoBox__cases,
+.infoBox .infoBox__today {
+  color: #ffffff !important;
+}
