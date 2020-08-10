@@ -2,6 +2,14 @@
   flex: 1;
   margin-right: 2%;
   border-radius: 10px !important;
+  box-sizing: border-box;
+  transition: all 0.33s ease-in-out !important;
+}
+
+.infoBox--selected {
+  -webkit-box-shadow: inset 0px -4px 0px 0px rgba(0, 0, 0, 0.3) !important;
+  -moz-box-shadow: inset 0px -4px 0px 0px rgba(0, 0, 0, 0.3) !important;
+  box-shadow: inset 0px -4px 0px 0px rgba(0, 0, 0, 0.3) !important;
 }
 
 .infoBox:last-child {

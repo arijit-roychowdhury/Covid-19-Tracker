@@ -49,7 +49,7 @@ const options = {
   },
 };
 
-function LineGraph() {
+function LineGraph({ casesType = "cases" }) {
   const [data, setData] = useState({});
 
   //https://disease.sh/v3/covid-19/historical/all?lastdays=120
@@ -77,13 +77,13 @@ function LineGraph() {
         .then((res) => res.json())
         .then((data) => {
           console.log(data);
-          const chartData = buildChartData(data);
+          const chartData = buildChartData(data, casesType);
           setData(chartData);
         });
     };
 
     fetchData();
-  }, []);
+  }, [casesType]);
 
   return (
     <div className="linegraph">
