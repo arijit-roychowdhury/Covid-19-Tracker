@@ -4,6 +4,7 @@
   border-radius: 10px !important;
   box-sizing: border-box;
   transition: all 0.33s ease-in-out !important;
+  cursor: pointer;
 }
 
 .infoBox--selected {
