@@ -9,7 +9,7 @@ import "leaflet/dist/leaflet.css";
 
 import { sortData } from "./util";
 
-import "./App.css";
+import "./assets/css/App.css";
 
 function App() {
   const [countries, setCountries] = useState([]);

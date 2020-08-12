@@ -2,7 +2,7 @@ import React from "react";
 import numeral from "numeral";
 import { Card, CardContent, Typography, createStyles } from "@material-ui/core";
 
-import "./InfoBox.css";
+import "./assets/css/InfoBox.css";
 
 function InfoBox({ title, cases, active, total, ...props }) {
   return (
