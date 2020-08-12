@@ -12,7 +12,7 @@ body {
 .app {
   width: 80%;
   max-width: 1366px;
-  margin-top: 30px;
+  margin-top: 50px;
   margin-left: auto;
   margin-right: auto;
   display: flex;
@@ -24,7 +24,7 @@ body {
   margin-right: auto;
 }
 .app__right {
-  width: 35%;
+  width: 37%;
 }
 
 .app__header {
