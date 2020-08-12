@@ -52,22 +52,22 @@ const options = {
 const casesTypeColors = {
   cases: {
     hex: "#ec4887",
-    multiplier: 800,
+    half_op: "rgba(236, 72, 135, 0.2)",
   },
   recovered: {
     hex: "#875fc0",
-    multiplier: 1200,
+    half_op: "rgba(135, 95, 192, 0.2)",
   },
   deaths: {
     hex: "#46c5f2",
-    multiplier: 2000,
+    half_op: "rgba(70, 192, 242, 0.2)",
   },
 };
 
 function LineGraph({ casesType = "cases" }) {
   const [data, setData] = useState({});
 
-  //https://disease.sh/v3/covid-19/historical/all?lastdays=120
+  //https://disease.sh/v3/covid-19/historical/all?lastdays=180
 
   const buildChartData = (data, casesType = "cases") => {
     const chartData = [];
@@ -88,7 +88,7 @@ function LineGraph({ casesType = "cases" }) {
 
   useEffect(() => {
     const fetchData = async () => {
-      fetch("https://disease.sh/v3/covid-19/historical/all?lastdays=180")
+      fetch("https://disease.sh/v3/covid-19/historical/all?lastdays=200")
         .then((res) => res.json())
         .then((data) => {
           console.log(data);
@@ -108,7 +108,7 @@ function LineGraph({ casesType = "cases" }) {
           data={{
             datasets: [
               {
-                backgroundColor: "rgba(236, 72, 135, 0.2)",
+                backgroundColor: casesTypeColors[casesType].half_op,
                 borderColor: casesTypeColors[casesType].hex,
                 data: data,
               },
