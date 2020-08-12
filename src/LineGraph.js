@@ -49,6 +49,21 @@ const options = {
   },
 };
 
+const casesTypeColors = {
+  cases: {
+    hex: "#ec4887",
+    multiplier: 800,
+  },
+  recovered: {
+    hex: "#875fc0",
+    multiplier: 1200,
+  },
+  deaths: {
+    hex: "#46c5f2",
+    multiplier: 2000,
+  },
+};
+
 function LineGraph({ casesType = "cases" }) {
   const [data, setData] = useState({});
 
@@ -94,7 +109,7 @@ function LineGraph({ casesType = "cases" }) {
             datasets: [
               {
                 backgroundColor: "rgba(236, 72, 135, 0.2)",
-                borderColor: "#ec4887",
+                borderColor: casesTypeColors[casesType].hex,
                 data: data,
               },
             ],
